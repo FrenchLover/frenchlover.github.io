@@ -1,4 +1,0 @@
-$( document ).ready(function() {
-	jQuery.each($(".suggestedreplyinner"), function() { $(this).delay( 800 ).replaceWith("<span>" + $(this).text() + "</span>"); }); 
-    console.log( "executediosfix!" );
-});
