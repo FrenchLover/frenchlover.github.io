@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
 <title>Sign Up to my weekly newsletter</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
@@ -72,14 +73,8 @@ cf-input {
 	bottom: 10px!important;
 }
 
-  cf-input-control-elements cf-list {
+ cf-input-control-elements cf-list {
     height: auto!important;
-    width: 100%!important;
-    transform: none!important;
-}
-
-cf-list-button {
-    display: none;
 }
 
 .conversational-form img.emoji {
@@ -108,12 +103,51 @@ cf-chat-response:last-child.peak-thumb.show text {
     visibility: hidden!important;
 }
 
+/* desktop style sheet, stacks suggested replies */
 
+@media screen and (min-width: 501px) {
 
-/*
-cf-chat {
-    padding-bottom: 300px!important;
-} */
+cf-input-control-elements cf-list {
+     width: 100%!important;
+    transform: none!important;
+}
+
+cf-list-button {
+    display: none;
+}
+
+}
+
+/* mobile style sheet, suggested replies with horizontal scrolling */
+
+@media screen and (max-width: 800px) {
+
+cf-chat-response {
+    display: table;
+    max-width: 80%;
+    min-width: 120px;
+    width: auto;
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding-left: 34px;
+    padding-top: 16px;
+    color: #aaafb0;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+}
+
+@media screen and (max-width: 500px) {
+
+cf-radio-button.cf-button.animate-in {
+    max-width: 220px!important;
+}
+
+}
 
 </style>
 
@@ -128,7 +162,7 @@ cf-chat {
           <div class="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
 
             <div id="mauticform_placementtest_hi_i_am_angel_whats_your"  data-validate="hi_i_am_angel_whats_your" data-validation-type="text" class="mauticform-row mauticform-text mauticform-field-1 mauticform-required">
-                <label id="mauticform_label_placementtest_hi_i_am_angel_whats_your" for="mauticform_input_placementtest_hi_i_am_angel_whats_your" class="mauticform-label">Hi, my name is Amélie :). What is your first name?</label>
+                <label id="mauticform_label_placementtest_hi_i_am_angel_whats_your" for="mauticform_input_placementtest_hi_i_am_angel_whats_your" class="mauticform-label">Hi, my name is Am&eacute;lie :). What is your name?</label>
                 <input id="mauticform_input_placementtest_hi_i_am_angel_whats_your" name="mauticform[hi_i_am_angel_whats_your]" value="" class="mauticform-input" type="text" />
                 <span class="mauticform-errormsg" style="display: none;">This is required.</span>
             </div>
