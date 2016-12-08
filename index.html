@@ -5,15 +5,6 @@
 <link rel="stylesheet" type="text/css" href="indexstyle/indexcss.css" />
 <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-<script src="//twemoji.maxcdn.com/twemoji.min.js">
-// Set the size of the rendered Emojis
-// This can be set to 16x16, 36x36, or 72x72
-twemoji.size = '36x36';
-
-// Parse the document body and
-// insert <img> tags in place of Unicode Emojis
-twemoji.parse(document.body);
-</script>
 </head>
 
 <body>
@@ -21,5 +12,21 @@ twemoji.parse(document.body);
   <li class="flex-item"><h1>congrats 😎</h1><p>you made to the french lover assets page. this is where we store all our secret files.<br><img class="githublogo" alt="" src="indexstyle/fl.png"></p></li>
 </ul>
 <!--  -->
+<script src="//twemoji.maxcdn.com/twemoji.min.js">
+</script>
+<script>var emojis = function () {
+    twemoji.size = '72x72';
+    twemoji.parse(document.body);
+}(window, twemoji);
+function ready(cb) {
+    if (document.readyState != 'loading') {
+        cb();
+    } else {
+        document.addEventListener('DOMContentLoaded', cb);
+    }
+}
+ready(emojis);
+//# sourceURL=pen.js
+</script>
 </body>
 </html>
