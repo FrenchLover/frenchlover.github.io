@@ -1170,7 +1170,7 @@ var cf;
             new Promise(function (resolve, reject) { return _this.resize(resolve, reject); }).then(function () {
                 // const h: number = this.el.classList.contains("one-row") ? 52 : this.el.classList.contains("two-row") ? 102 : 0;
                 var listHeight = _this.el.offsetHeight;
-                var h = _this.el.classList.contains("one-row") ? listHeight : _this.el.classList.contains("two-row") ? listHeight : 0;
+                var h = _this.el.classList.contains("one-row") ? 52 : _this.el.classList.contains("two-row") ? listHeight : 0;
                 var controlElementsAddedDTO = {
                     height: h,
                 };
