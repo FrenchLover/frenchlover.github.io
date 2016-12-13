@@ -169,6 +169,32 @@ cf-input-control-elements.one-row cf-list{height:62px}
 </style>
 
 
+
+<style type="text/css" scoped>
+    .mauticform_wrapper { max-width: 600px; margin: 10px auto; }
+    .mauticform-innerform {}
+    .mauticform-post-success {}
+    .mauticform-name { font-weight: bold; font-size: 1.5em; margin-bottom: 3px; }
+    .mauticform-description { margin-top: 2px; margin-bottom: 10px; }
+    .mauticform-error { margin-bottom: 10px; color: red; }
+    .mauticform-message { margin-bottom: 10px;color: green; }
+    .mauticform-row { display: block; margin-bottom: 20px; }
+    .mauticform-label { font-size: 1.1em; display: block; font-weight: bold; margin-bottom: 5px; }
+    .mauticform-row.mauticform-required .mauticform-label:after { color: #e32; content: " *"; display: inline; }
+    .mauticform-helpmessage { display: block; font-size: 0.9em; margin-bottom: 3px; }
+    .mauticform-errormsg { display: block; color: red; margin-top: 2px; }
+    .mauticform-selectbox, .mauticform-input, .mauticform-textarea { width: 100%; padding: 0.5em 0.5em; border: 1px solid #CCC; background: #fff; box-shadow: 0px 0px 0px #fff inset; border-radius: 4px; box-sizing: border-box; }
+    .mauticform-checkboxgrp-row {}
+    .mauticform-checkboxgrp-label { font-weight: normal; }
+    .mauticform-checkboxgrp-checkbox {}
+    .mauticform-radiogrp-row {}
+    .mauticform-radiogrp-label { font-weight: normal; }
+    .mauticform-radiogrp-radio {}
+    .mauticform-button-wrapper .mauticform-button.btn-default, .mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default { color: #5d6c7c;background-color: #ffffff;border-color: #dddddd;}
+    .mauticform-button-wrapper .mauticform-button, .mauticform-pagebreak-wrapper .mauticform-pagebreak { display: inline-block;margin-bottom: 0;font-weight: 600;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 6px 12px;font-size: 13px;line-height: 1.3856;border-radius: 3px;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+    .mauticform-button-wrapper .mauticform-button.btn-default[disabled], .mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default[disabled] { background-color: #ffffff; border-color: #dddddd; opacity: 0.75; cursor: not-allowed; }
+    .mauticform-pagebreak-wrapper .mauticform-button-wrapper {  display: inline; }
+</style>
 <div id="mauticform_wrapper_placementtest" class="mauticform_wrapper">
     <form autocomplete="false" cf-form-element role="form" method="post" action="https://frenchlover.mautic.net/form/submit?formId=13" id="mauticform_placementtest" data-mautic-form="placementtest">
         <div class="mauticform-error" id="mauticform_placementtest_error"></div>
@@ -179,7 +205,7 @@ cf-input-control-elements.one-row cf-list{height:62px}
           <div class="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
 
             <div id="mauticform_placementtest_hi_i_am_angel_whats_your"  data-validate="hi_i_am_angel_whats_your" data-validation-type="text" class="mauticform-row mauticform-text mauticform-field-1 mauticform-required">
-                <label id="mauticform_label_placementtest_hi_i_am_angel_whats_your" for="mauticform_input_placementtest_hi_i_am_angel_whats_your" class="mauticform-label">Hi, my name is Am&eacute;lie :). What is your name?</label>
+                <label id="mauticform_label_placementtest_hi_i_am_angel_whats_your" for="mauticform_input_placementtest_hi_i_am_angel_whats_your" class="mauticform-label">Hi, my name is Amélie :). What is your name?</label>
                 <input id="mauticform_input_placementtest_hi_i_am_angel_whats_your" name="mauticform[hi_i_am_angel_whats_your]" value="" class="mauticform-input" type="text" />
                 <span class="mauticform-errormsg" style="display: none;">This is required.</span>
             </div>
@@ -194,7 +220,7 @@ cf-input-control-elements.one-row cf-list{height:62px}
                 <label  class="mauticform-label" for="mauticform_radiogrp_radio_whats_your_gender_Female1">And what's your gender?</label>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_whats_your_gender_female0" for="mauticform_radiogrp_radio_whats_your_gender_female0"  class="mauticform-radiogrp-label">
-                        <input cf-questions="What's your gender?" name="mauticform[whats_your_gender]" class="mauticform-radiogrp-radio" name="mauticform[whats_your_gender]" id="mauticform_radiogrp_radio_whats_your_gender_female0" type="radio" value="female" />
+                        <input cf-questions="And what's your gender?" name="mauticform[whats_your_gender]" class="mauticform-radiogrp-radio" name="mauticform[whats_your_gender]" id="mauticform_radiogrp_radio_whats_your_gender_female0" type="radio" value="female" />
                         Female
                     </label>
                 </div>
@@ -242,17 +268,17 @@ cf-input-control-elements.one-row cf-list{height:62px}
             </div>
 
             <div id="mauticform_placementtest_you_want_to_search_the_in1"  class="mauticform-row mauticform-text mauticform-field-7">
-                <label id="mauticform_label_placementtest_you_want_to_search_the_in1" for="mauticform_input_placementtest_you_want_to_search_the_in1" class="mauticform-label">You want to search the internet for ways to improve your French. Which keywords do you type in?</label>
+                <label id="mauticform_label_placementtest_you_want_to_search_the_in1" for="mauticform_input_placementtest_you_want_to_search_the_in1" class="mauticform-label">Imagine you'd want to search the internet for ways to improve your French. Which keywords would you type in?</label>
                 <input id="mauticform_input_placementtest_you_want_to_search_the_in1" name="mauticform[you_want_to_search_the_in1]" value="" class="mauticform-input" type="text" />
                 <span class="mauticform-errormsg" style="display: none;"></span>
             </div>
 
             <div id="mauticform_placementtest_so_far_so_good_now_i_will"  class="mauticform-row mauticform-radiogrp mauticform-field-8">
-                <label  class="mauticform-label" for="mauticform_radiogrp_radio_so_far_so_good_now_i_will_Soundsgood1">So far so good. Now I will presented you with seven situations in which you have to use your French skills. In those situations, you don’t have a dictionary or any translating tool. Please select what is most likely to happen in each situation. Ready></label>
+                <label  class="mauticform-label" for="mauticform_radiogrp_radio_so_far_so_good_now_i_will_Letsstart1">So far so good. Now I will presented you with seven situations in which you have to use your French skills. In those situations, you don’t have a dictionary or any translating tool. Please select what is most likely to happen in each situation. Ready?</label>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_so_far_so_good_now_i_will_ok0" for="mauticform_radiogrp_radio_so_far_so_good_now_i_will_ok0"  class="mauticform-radiogrp-label">
                         <input cf-questions="So far so good. Now I will presented you with seven situations in which you have to use your French skills. In those situations, you don’t have a dictionary or any translating tool. Please select what is most likely to happen in each situation. Ready?" name="mauticform[so_far_so_good_now_i_will]" class="mauticform-radiogrp-radio" name="mauticform[so_far_so_good_now_i_will]" id="mauticform_radiogrp_radio_so_far_so_good_now_i_will_ok0" type="radio" value="ok" />
-                        Let's start.
+                        Let's start
                     </label>
                 </div>
                 <span class="mauticform-errormsg" style="display: none;"></span>
@@ -398,11 +424,11 @@ cf-input-control-elements.one-row cf-list{height:62px}
                 <span class="mauticform-errormsg" style="display: none;"></span>
             </div>
 
-           <div id="mauticform_placementtest_5_this_is_francois_he_is"  class="mauticform-row mauticform-radiogrp mauticform-field-13">
-                <label  class="mauticform-label" for="mauticform_radiogrp_radio_5_this_is_francois_he_is_AIcantakecareofhimgivehimallthenecessaryinformationsandmakehimfeelwelcomeandateaseWecanhaveconversationstogetheraboutanytopicincludingthehealthofhisgrandma1">5. This is François. He is visiting your company/school for a week as a trainee/ student in your school. He speaks only French. Since you are the best at French in your company/ school, you are in charge of François now. How much can you achieve together with him?</label>
+            <div id="mauticform_placementtest_5_this_is_francois_he_is"  class="mauticform-row mauticform-radiogrp mauticform-field-13">
+                <label  class="mauticform-label" for="mauticform_radiogrp_radio_5_this_is_francois_he_is_AIcantakecareofhimgivehimallthenecessaryinformationsandmakehimfeelwelcomeandateaseWecanhaveconversationstogetheraboutanytopicincludingthehealthofhisgrandma1">5. François is visiting your company/school for a week as a trainee/ student in your school. He speaks only French. Since you are the best at French in your company/ school, you are in charge of François now. How much can you achieve together with him?</label>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_5_this_is_francois_he_is_A0" for="mauticform_radiogrp_radio_5_this_is_francois_he_is_A0"  class="mauticform-radiogrp-label">
-                        <input cf-questions="5. This is François. He is visiting your company/school for a week as a trainee/ student in your school. He speaks only French. Since you are the best at French in your company/ school, you are in charge of François now. How much can you achieve together with him?" name="mauticform[5_this_is_francois_he_is]" class="mauticform-radiogrp-radio" name="mauticform[5_this_is_francois_he_is]" id="mauticform_radiogrp_radio_5_this_is_francois_he_is_A0" type="radio" value="A" />
+                        <input cf-questions="5. François is visiting your company/school for a week as a trainee/ student in your school. He speaks only French. Since you are the best at French in your company/ school, you are in charge of François now. How much can you achieve together with him?" name="mauticform[5_this_is_francois_he_is]" class="mauticform-radiogrp-radio" name="mauticform[5_this_is_francois_he_is]" id="mauticform_radiogrp_radio_5_this_is_francois_he_is_A0" type="radio" value="A" />
                         {A} I can take care of him, give him all the necessary informations and make him feel welcome and at ease. We can have conversations together about any topic, including the health of his grandma.
                     </label>
                 </div>
@@ -504,10 +530,10 @@ cf-input-control-elements.one-row cf-list{height:62px}
             </div>
 
             <div id="mauticform_placementtest_writing_please_answer_the"  class="mauticform-row mauticform-radiogrp mauticform-field-16">
-                <label  class="mauticform-label" for="mauticform_radiogrp_radio_writing_please_answer_the_Letsgo1">Writing: Please answer the following question in French. Write up to 300 words (it can be shorter, but the longer it is, the more accurate your results will be).</label>
+                <label  class="mauticform-label" for="mauticform_radiogrp_radio_writing_please_answer_the_Letsgo1">All done! Now let's do a quick writing exercise: please answer the following question in French. Write up to 300 words (it can be shorter, but the longer it is, the more accurate your results will be).</label>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_writing_please_answer_the_ok0" for="mauticform_radiogrp_radio_writing_please_answer_the_ok0"  class="mauticform-radiogrp-label">
-                        <input cf-questions="Writing: Please answer the following question in French. Write up to 300 words (it can be shorter, but the longer it is, the more accurate your results will be)." name="mauticform[writing_please_answer_the]" class="mauticform-radiogrp-radio" name="mauticform[writing_please_answer_the]" id="mauticform_radiogrp_radio_writing_please_answer_the_ok0" type="radio" value="ok" />
+                        <input cf-questions="All done! Now let's do a quick writing exercise: please answer the following question in French. Write up to 300 words (it can be shorter, but the longer it is, the more accurate your results will be)." name="mauticform[writing_please_answer_the]" class="mauticform-radiogrp-radio" name="mauticform[writing_please_answer_the]" id="mauticform_radiogrp_radio_writing_please_answer_the_ok0" type="radio" value="ok" />
                         Let's go
                     </label>
                 </div>
@@ -515,13 +541,13 @@ cf-input-control-elements.one-row cf-list{height:62px}
             </div>
 
             <div id="mauticform_placementtest_aujourdhui_la_langue_fran"  class="mauticform-row mauticform-text mauticform-field-17">
-                <label id="mauticform_label_placementtest_aujourdhui_la_langue_fran" for="mauticform_input_placementtest_aujourdhui_la_langue_fran" class="mauticform-label">Aujourd'hui, la langue française n’est pas très importante. Êtes-vous d’accord? (Please answer in French) 🇫🇷</label>
+                <label id="mauticform_label_placementtest_aujourdhui_la_langue_fran" for="mauticform_input_placementtest_aujourdhui_la_langue_fran" class="mauticform-label">Aujourd'hui, la langue française n’est pas très importante. Êtes-vous d’accord? (Please answer in French)</label>
                 <input id="mauticform_input_placementtest_aujourdhui_la_langue_fran" name="mauticform[aujourdhui_la_langue_fran]" value="" class="mauticform-input" type="text" />
                 <span class="mauticform-errormsg" style="display: none;"></span>
             </div>
 
             <div id="mauticform_placementtest_how_do_you_like_this_test"  class="mauticform-row mauticform-text mauticform-field-18">
-                <label id="mauticform_label_placementtest_how_do_you_like_this_test" for="mauticform_input_placementtest_how_do_you_like_this_test" class="mauticform-label">How do you like this test? Any feedback is appreciated :)</label>
+                <label id="mauticform_label_placementtest_how_do_you_like_this_test" for="mauticform_input_placementtest_how_do_you_like_this_test" class="mauticform-label">That's it! Do you like this test? Any feedback is appreciated :)</label>
                 <input id="mauticform_input_placementtest_how_do_you_like_this_test" name="mauticform[how_do_you_like_this_test]" value="" class="mauticform-input" type="text" />
                 <span class="mauticform-errormsg" style="display: none;"></span>
             </div>
