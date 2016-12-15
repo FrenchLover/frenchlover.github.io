@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
+<head>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+<!-- 
+    ________     _                                                                      _                      
+   /  ____  \   | |                                                  /\                | |                     
+  /  / ___|  \  | |     __ _ _ __   __ _ _   _  __ _  __ _  ___     /  \   ___ __ _  __| | ___ _ __ ___  _   _ 
+ |  | |       | | |    / _` | '_ \ / _` | | | |/ _` |/ _` |/ _ \   / /\ \ / __/ _` |/ _` |/ _ \ '_ ` _ \| | | |
+ |  | |___    | | |___| (_| | | | | (_| | |_| | (_| | (_| |  __/  / ____ \ (_| (_| | (_| |  __/ | | | | | |_| |
+  \  \____|  /  |______\__,_|_| |_|\__, |\__,_|\__,_|\__, |\___| /_/    \_\___\__,_|\__,_|\___|_| |_| |_|\__, |
+   \________/                       __/ |             __/ |                                               __/ |
+                                   |___/             |___/                                               |___/ 
+-->
 <title>French Placement Test</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="calcamelie.js"></script>
 <style>
 
 </style>
@@ -221,19 +233,19 @@ cf-input-control-elements.one-row cf-list{height:62px}
                 <label  class="mauticform-label" for="mauticform_radiogrp_radio_whats_your_gender_Female1">And what's your gender?</label>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_whats_your_gender_female0" for="mauticform_radiogrp_radio_whats_your_gender_female0"  class="mauticform-radiogrp-label">
-                        <input cf-questions="And what's your gender?" name="mauticform[whats_your_gender]" class="mauticform-radiogrp-radio" name="mauticform[whats_your_gender]" id="mauticform_radiogrp_radio_whats_your_gender_female0" type="radio" value="female" />
+                        <input cf-questions="And what's your gender?" name="mauticform[whats_your_gender]" class="mauticform-radiogrp-radio gender" name="mauticform[whats_your_gender]" id="mauticform_radiogrp_radio_whats_your_gender_female0" type="radio" value="female" />
                         Female
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_whats_your_gender_male1" for="mauticform_radiogrp_radio_whats_your_gender_male1"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[whats_your_gender]" class="mauticform-radiogrp-radio" name="mauticform[whats_your_gender]" id="mauticform_radiogrp_radio_whats_your_gender_male1" type="radio" value="male" />
+                        <input  name="mauticform[whats_your_gender]" class="mauticform-radiogrp-radio gender" name="mauticform[whats_your_gender]" id="mauticform_radiogrp_radio_whats_your_gender_male1" type="radio" value="male" />
                         Male
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_whats_your_gender_othergender2" for="mauticform_radiogrp_radio_whats_your_gender_othergender2"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[whats_your_gender]" class="mauticform-radiogrp-radio" name="mauticform[whats_your_gender]" id="mauticform_radiogrp_radio_whats_your_gender_othergender2" type="radio" value="othergender" />
+                        <input  name="mauticform[whats_your_gender]" class="mauticform-radiogrp-radio gender" name="mauticform[whats_your_gender]" id="mauticform_radiogrp_radio_whats_your_gender_othergender2" type="radio" value="othergender" />
                         Other
                     </label>
                 </div>
@@ -289,31 +301,31 @@ cf-input-control-elements.one-row cf-list{height:62px}
                 <label  class="mauticform-label" for="mauticform_radiogrp_radio_1_you_are_traveling_in_fr2_AIcangotoanymuseumorconferenceandunderstandalmosteverythingaswellastakepartinanyeventrequiringmetospeakFrenchwithoutdifficulty1">1. You are traveling in France, how much can you achieve with the language?</label>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_1_you_are_traveling_in_fr2_A0" for="mauticform_radiogrp_radio_1_you_are_traveling_in_fr2_A0"  class="mauticform-radiogrp-label">
-                        <input cf-questions="1. You are traveling in France, how much can you achieve with the language?" name="mauticform[1_you_are_traveling_in_fr2]" class="mauticform-radiogrp-radio" name="mauticform[1_you_are_traveling_in_fr2]" id="mauticform_radiogrp_radio_1_you_are_traveling_in_fr2_A0" type="radio" value="A" />
+                        <input cf-questions="1. You are traveling in France, how much can you achieve with the language?" name="mauticform[1_you_are_traveling_in_fr2]" class="mauticform-radiogrp-radio q1" name="mauticform[1_you_are_traveling_in_fr2]" id="mauticform_radiogrp_radio_1_you_are_traveling_in_fr2_A0" type="radio" value="A" />
                         {A} I can go to any museum or conference and understand (almost) everything, as well as take part in any event requiring me to speak French, without difficulty.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_1_you_are_traveling_in_fr2_B1" for="mauticform_radiogrp_radio_1_you_are_traveling_in_fr2_B1"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[1_you_are_traveling_in_fr2]" class="mauticform-radiogrp-radio" name="mauticform[1_you_are_traveling_in_fr2]" id="mauticform_radiogrp_radio_1_you_are_traveling_in_fr2_B1" type="radio" value="B" />
+                        <input  name="mauticform[1_you_are_traveling_in_fr2]" class="mauticform-radiogrp-radionq1" name="mauticform[1_you_are_traveling_in_fr2]" id="mauticform_radiogrp_radio_1_you_are_traveling_in_fr2_B1" type="radio" value="B" />
                         {B} I can deal with every situation which arises, in fact I’d probably be able to live in France without major problems, although it would cost me a lot of effort.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_1_you_are_traveling_in_fr2_C2" for="mauticform_radiogrp_radio_1_you_are_traveling_in_fr2_C2"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[1_you_are_traveling_in_fr2]" class="mauticform-radiogrp-radio" name="mauticform[1_you_are_traveling_in_fr2]" id="mauticform_radiogrp_radio_1_you_are_traveling_in_fr2_C2" type="radio" value="C" />
+                        <input  name="mauticform[1_you_are_traveling_in_fr2]" class="mauticform-radiogrp-radio q1" name="mauticform[1_you_are_traveling_in_fr2]" id="mauticform_radiogrp_radio_1_you_are_traveling_in_fr2_C2" type="radio" value="C" />
                         {C} I can go to restaurants, purchase (almost) all I need, and solve minor problems such as having the wrong hotel key or having lost a document.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_1_you_are_traveling_in_fr2_D3" for="mauticform_radiogrp_radio_1_you_are_traveling_in_fr2_D3"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[1_you_are_traveling_in_fr2]" class="mauticform-radiogrp-radio" name="mauticform[1_you_are_traveling_in_fr2]" id="mauticform_radiogrp_radio_1_you_are_traveling_in_fr2_D3" type="radio" value="D" />
+                        <input  name="mauticform[1_you_are_traveling_in_fr2]" class="mauticform-radiogrp-radio q1" name="mauticform[1_you_are_traveling_in_fr2]" id="mauticform_radiogrp_radio_1_you_are_traveling_in_fr2_D3" type="radio" value="D" />
                         {D} I can probably shop in a supermarket and order at a bar or restaurant, assuming people are friendly, patient and ready to repeat and/or speak slowly.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_1_you_are_traveling_in_fr2_E4" for="mauticform_radiogrp_radio_1_you_are_traveling_in_fr2_E4"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[1_you_are_traveling_in_fr2]" class="mauticform-radiogrp-radio" name="mauticform[1_you_are_traveling_in_fr2]" id="mauticform_radiogrp_radio_1_you_are_traveling_in_fr2_E4" type="radio" value="E" />
+                        <input  name="mauticform[1_you_are_traveling_in_fr2]" class="mauticform-radiogrp-radio q1" name="mauticform[1_you_are_traveling_in_fr2]" id="mauticform_radiogrp_radio_1_you_are_traveling_in_fr2_E4" type="radio" value="E" />
                         {E} I can greet and thank people, use isolated words and a few sentences which I have learned.
                     </label>
                 </div>
@@ -324,31 +336,31 @@ cf-input-control-elements.one-row cf-list{height:62px}
                 <label  class="mauticform-label" for="mauticform_radiogrp_radio_2_you_are_attending_a_con1_AIcanunderstandalmosteverythingsomewhateffortlessly1">2. You are attending a conference in French. The topic is related to your job, or your field of study. The speaker speaks clearly in a standard French accent and uses a powerpoint presentation. How much do you understand?</label>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_2_you_are_attending_a_con1_A0" for="mauticform_radiogrp_radio_2_you_are_attending_a_con1_A0"  class="mauticform-radiogrp-label">
-                        <input cf-questions="2. You are attending a conference in French. The topic is related to your job, or your field of study. The speaker speaks clearly in a standard French accent and uses a powerpoint presentation. How much do you understand?" name="mauticform[2_you_are_attending_a_con1]" class="mauticform-radiogrp-radio" name="mauticform[2_you_are_attending_a_con1]" id="mauticform_radiogrp_radio_2_you_are_attending_a_con1_A0" type="radio" value="A" />
+                        <input cf-questions="2. You are attending a conference in French. The topic is related to your job, or your field of study. The speaker speaks clearly in a standard French accent and uses a powerpoint presentation. How much do you understand?" name="mauticform[2_you_are_attending_a_con1]" class="q2 mauticform-radiogrp-radio" name="mauticform[2_you_are_attending_a_con1]" id="mauticform_radiogrp_radio_2_you_are_attending_a_con1_A0" type="radio" value="A" />
                         {A} I can understand almost everything, somewhat effortlessly.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_2_you_are_attending_a_con1_B1" for="mauticform_radiogrp_radio_2_you_are_attending_a_con1_B1"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[2_you_are_attending_a_con1]" class="mauticform-radiogrp-radio" name="mauticform[2_you_are_attending_a_con1]" id="mauticform_radiogrp_radio_2_you_are_attending_a_con1_B1" type="radio" value="B" />
+                        <input  name="mauticform[2_you_are_attending_a_con1]" class="mauticform-radiogrp-radio q2" name="mauticform[2_you_are_attending_a_con1]" id="mauticform_radiogrp_radio_2_you_are_attending_a_con1_B1" type="radio" value="B" />
                         {B} I can understand most of it, with effort.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_2_you_are_attending_a_con1_C2" for="mauticform_radiogrp_radio_2_you_are_attending_a_con1_C2"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[2_you_are_attending_a_con1]" class="mauticform-radiogrp-radio" name="mauticform[2_you_are_attending_a_con1]" id="mauticform_radiogrp_radio_2_you_are_attending_a_con1_C2" type="radio" value="C" />
+                        <input  name="mauticform[2_you_are_attending_a_con1]" class="mauticform-radiogrp-radio q2" name="mauticform[2_you_are_attending_a_con1]" id="mauticform_radiogrp_radio_2_you_are_attending_a_con1_C2" type="radio" value="C" />
                         {C} I can probably understand the main points, but most of the speech remains unclear.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_2_you_are_attending_a_con1_D3" for="mauticform_radiogrp_radio_2_you_are_attending_a_con1_D3"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[2_you_are_attending_a_con1]" class="mauticform-radiogrp-radio" name="mauticform[2_you_are_attending_a_con1]" id="mauticform_radiogrp_radio_2_you_are_attending_a_con1_D3" type="radio" value="D" />
+                        <input  name="mauticform[2_you_are_attending_a_con1]" class="mauticform-radiogrp-radio q2" name="mauticform[2_you_are_attending_a_con1]" id="mauticform_radiogrp_radio_2_you_are_attending_a_con1_D3" type="radio" value="D" />
                         {D} I can only understand isolated words or short phrases.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_2_you_are_attending_a_con1_E4" for="mauticform_radiogrp_radio_2_you_are_attending_a_con1_E4"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[2_you_are_attending_a_con1]" class="mauticform-radiogrp-radio" name="mauticform[2_you_are_attending_a_con1]" id="mauticform_radiogrp_radio_2_you_are_attending_a_con1_E4" type="radio" value="E" />
+                        <input  name="mauticform[2_you_are_attending_a_con1]" class="mauticform-radiogrp-radio q2" name="mauticform[2_you_are_attending_a_con1]" id="mauticform_radiogrp_radio_2_you_are_attending_a_con1_E4" type="radio" value="E" />
                         {E} I probably understand nothing except “hello”/ “welcome” / “thank you”.
                     </label>
                 </div>
@@ -359,31 +371,31 @@ cf-input-control-elements.one-row cf-list{height:62px}
                 <label  class="mauticform-label" for="mauticform_radiogrp_radio_3_you_are_given_a_book_in_AIcanunderstandalmosteverythingandusethebookwithoutproblemsandalmosteffortlessly1">3. You are given a book in French. It is non-fiction, related to a topic you know very well in your mother language (such as your job or a favourite hobby of yours), and contains a lot of images. How much do you understand?</label>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_3_you_are_given_a_book_in_A0" for="mauticform_radiogrp_radio_3_you_are_given_a_book_in_A0"  class="mauticform-radiogrp-label">
-                        <input cf-questions="3. You are given a book in French. It is non-fiction, related to a topic you know very well in your mother language (such as your job or a favourite hobby of yours), and contains a lot of images. How much do you understand?" name="mauticform[3_you_are_given_a_book_in]" class="mauticform-radiogrp-radio" name="mauticform[3_you_are_given_a_book_in]" id="mauticform_radiogrp_radio_3_you_are_given_a_book_in_A0" type="radio" value="A" />
+                        <input cf-questions="3. You are given a book in French. It is non-fiction, related to a topic you know very well in your mother language (such as your job or a favourite hobby of yours), and contains a lot of images. How much do you understand?" name="mauticform[3_you_are_given_a_book_in]" class="q3 mauticform-radiogrp-radio" name="mauticform[3_you_are_given_a_book_in]" id="mauticform_radiogrp_radio_3_you_are_given_a_book_in_A0" type="radio" value="A" />
                         {A} I can understand almost everything and use the book without problems and almost effortlessly.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_3_you_are_given_a_book_in_B1" for="mauticform_radiogrp_radio_3_you_are_given_a_book_in_B1"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[3_you_are_given_a_book_in]" class="mauticform-radiogrp-radio" name="mauticform[3_you_are_given_a_book_in]" id="mauticform_radiogrp_radio_3_you_are_given_a_book_in_B1" type="radio" value="B" />
+                        <input  name="mauticform[3_you_are_given_a_book_in]" class="mauticform-radiogrp-radio q3" name="mauticform[3_you_are_given_a_book_in]" id="mauticform_radiogrp_radio_3_you_are_given_a_book_in_B1" type="radio" value="B" />
                         {B} I can understand most of it. There are words I don’t know, but it doesn’t prevent me from understanding most of the text and using the book.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_3_you_are_given_a_book_in_C2" for="mauticform_radiogrp_radio_3_you_are_given_a_book_in_C2"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[3_you_are_given_a_book_in]" class="mauticform-radiogrp-radio" name="mauticform[3_you_are_given_a_book_in]" id="mauticform_radiogrp_radio_3_you_are_given_a_book_in_C2" type="radio" value="C" />
+                        <input  name="mauticform[3_you_are_given_a_book_in]" class="mauticform-radiogrp-radio q3" name="mauticform[3_you_are_given_a_book_in]" id="mauticform_radiogrp_radio_3_you_are_given_a_book_in_C2" type="radio" value="C" />
                         {C} I can probably grasp the main points and understand about 50% of it, with the help of the images, although there are many words I don’t know.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_3_you_are_given_a_book_in_D3" for="mauticform_radiogrp_radio_3_you_are_given_a_book_in_D3"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[3_you_are_given_a_book_in]" class="mauticform-radiogrp-radio" name="mauticform[3_you_are_given_a_book_in]" id="mauticform_radiogrp_radio_3_you_are_given_a_book_in_D3" type="radio" value="D" />
+                        <input  name="mauticform[3_you_are_given_a_book_in]" class="mauticform-radiogrp-radio q3" name="mauticform[3_you_are_given_a_book_in]" id="mauticform_radiogrp_radio_3_you_are_given_a_book_in_D3" type="radio" value="D" />
                         {D} Most of what I understand comes from the images. I can understand some of the text, but almost every sentence contains many words I don’t know and it is almost impossible for me to use the book.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_3_you_are_given_a_book_in_E4" for="mauticform_radiogrp_radio_3_you_are_given_a_book_in_E4"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[3_you_are_given_a_book_in]" class="mauticform-radiogrp-radio" name="mauticform[3_you_are_given_a_book_in]" id="mauticform_radiogrp_radio_3_you_are_given_a_book_in_E4" type="radio" value="E" />
+                        <input  name="mauticform[3_you_are_given_a_book_in]" class="mauticform-radiogrp-radio q3" name="mauticform[3_you_are_given_a_book_in]" id="mauticform_radiogrp_radio_3_you_are_given_a_book_in_E4" type="radio" value="E" />
                         {E} I can understand the images and maybe a few words.
                     </label>
                 </div>
@@ -394,31 +406,31 @@ cf-input-control-elements.one-row cf-list{height:62px}
                 <label  class="mauticform-label" for="mauticform_radiogrp_radio_4_you_are_given_a_novel_i_AIcanprobablyreadthebookwithoutmucheffort1">4. You are given a novel in French. It was written in the last decade, in standard French. It doesn’t contain any pictures. How much do you understand?</label>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_4_you_are_given_a_novel_i_A0" for="mauticform_radiogrp_radio_4_you_are_given_a_novel_i_A0"  class="mauticform-radiogrp-label">
-                        <input cf-questions="4. You are given a novel in French. It was written in the last decade, in standard French. It doesn’t contain any pictures. How much do you understand?" name="mauticform[4_you_are_given_a_novel_i]" class="mauticform-radiogrp-radio" name="mauticform[4_you_are_given_a_novel_i]" id="mauticform_radiogrp_radio_4_you_are_given_a_novel_i_A0" type="radio" value="A" />
+                        <input cf-questions="4. You are given a novel in French. It was written in the last decade, in standard French. It doesn’t contain any pictures. How much do you understand?" name="mauticform[4_you_are_given_a_novel_i]" class="mauticform-radiogrp-radio q4" name="mauticform[4_you_are_given_a_novel_i]" id="mauticform_radiogrp_radio_4_you_are_given_a_novel_i_A0" type="radio" value="A" />
                         {A} I can probably read the book without much effort.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_4_you_are_given_a_novel_i_B1" for="mauticform_radiogrp_radio_4_you_are_given_a_novel_i_B1"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[4_you_are_given_a_novel_i]" class="mauticform-radiogrp-radio" name="mauticform[4_you_are_given_a_novel_i]" id="mauticform_radiogrp_radio_4_you_are_given_a_novel_i_B1" type="radio" value="B" />
+                        <input  name="mauticform[4_you_are_given_a_novel_i]" class="mauticform-radiogrp-radio q4" name="mauticform[4_you_are_given_a_novel_i]" id="mauticform_radiogrp_radio_4_you_are_given_a_novel_i_B1" type="radio" value="B" />
                         {B} With some effort, I can probably read the book and understand much of it. There are words I don’t know but those don’t hinder my understanding too much.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_4_you_are_given_a_novel_i_C2" for="mauticform_radiogrp_radio_4_you_are_given_a_novel_i_C2"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[4_you_are_given_a_novel_i]" class="mauticform-radiogrp-radio" name="mauticform[4_you_are_given_a_novel_i]" id="mauticform_radiogrp_radio_4_you_are_given_a_novel_i_C2" type="radio" value="C" />
+                        <input  name="mauticform[4_you_are_given_a_novel_i]" class="mauticform-radiogrp-radio q4" name="mauticform[4_you_are_given_a_novel_i]" id="mauticform_radiogrp_radio_4_you_are_given_a_novel_i_C2" type="radio" value="C" />
                         {C} With a lot of effort, I can grasp some of the meaning of the text. I can read a page and understand some of it. I couldn’t read and understand the complete book, even with lots of effort.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_4_you_are_given_a_novel_i_D3" for="mauticform_radiogrp_radio_4_you_are_given_a_novel_i_D3"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[4_you_are_given_a_novel_i]" class="mauticform-radiogrp-radio" name="mauticform[4_you_are_given_a_novel_i]" id="mauticform_radiogrp_radio_4_you_are_given_a_novel_i_D3" type="radio" value="D" />
+                        <input  name="mauticform[4_you_are_given_a_novel_i]" class="mauticform-radiogrp-radio q4" name="mauticform[4_you_are_given_a_novel_i]" id="mauticform_radiogrp_radio_4_you_are_given_a_novel_i_D3" type="radio" value="D" />
                         {D} I can understand very little, and grasp the meaning of some words or phrases on the back cover and any other page. I can’t understand enough to read any page of the book, even with a lot of effort.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_4_you_are_given_a_novel_i_E4" for="mauticform_radiogrp_radio_4_you_are_given_a_novel_i_E4"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[4_you_are_given_a_novel_i]" class="mauticform-radiogrp-radio" name="mauticform[4_you_are_given_a_novel_i]" id="mauticform_radiogrp_radio_4_you_are_given_a_novel_i_E4" type="radio" value="E" />
+                        <input  name="mauticform[4_you_are_given_a_novel_i]" class="mauticform-radiogrp-radio q4" name="mauticform[4_you_are_given_a_novel_i]" id="mauticform_radiogrp_radio_4_you_are_given_a_novel_i_E4" type="radio" value="E" />
                         {E} Probably nothing - unless the title or back cover contain easy words which I know.
                     </label>
                 </div>
@@ -429,31 +441,31 @@ cf-input-control-elements.one-row cf-list{height:62px}
                 <label  class="mauticform-label" for="mauticform_radiogrp_radio_5_this_is_francois_he_is_AIcantakecareofhimgivehimallthenecessaryinformationsandmakehimfeelwelcomeandateaseWecanhaveconversationstogetheraboutanytopicincludingthehealthofhisgrandma1">5. François is visiting your company/school for a week as a trainee/ student in your school. He speaks only French. Since you are the best at French in your company/ school, you are in charge of François now. How much can you achieve together with him?</label>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_5_this_is_francois_he_is_A0" for="mauticform_radiogrp_radio_5_this_is_francois_he_is_A0"  class="mauticform-radiogrp-label">
-                        <input cf-questions="5. François is visiting your company/school for a week as a trainee/ student in your school. He speaks only French. Since you are the best at French in your company/ school, you are in charge of François now. How much can you achieve together with him?" name="mauticform[5_this_is_francois_he_is]" class="mauticform-radiogrp-radio" name="mauticform[5_this_is_francois_he_is]" id="mauticform_radiogrp_radio_5_this_is_francois_he_is_A0" type="radio" value="A" />
+                        <input cf-questions="5. François is visiting your company/school for a week as a trainee/ student in your school. He speaks only French. Since you are the best at French in your company/ school, you are in charge of François now. How much can you achieve together with him?" name="mauticform[5_this_is_francois_he_is]" class="mauticform-radiogrp-radio q5" name="mauticform[5_this_is_francois_he_is]" id="mauticform_radiogrp_radio_5_this_is_francois_he_is_A0" type="radio" value="A" />
                         {A} I can take care of him, give him all the necessary informations and make him feel welcome and at ease. We can have conversations together about any topic, including the health of his grandma.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_5_this_is_francois_he_is_B1" for="mauticform_radiogrp_radio_5_this_is_francois_he_is_B1"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[5_this_is_francois_he_is]" class="mauticform-radiogrp-radio" name="mauticform[5_this_is_francois_he_is]" id="mauticform_radiogrp_radio_5_this_is_francois_he_is_B1" type="radio" value="B" />
+                        <input  name="mauticform[5_this_is_francois_he_is]" class="mauticform-radiogrp-radio q5" name="mauticform[5_this_is_francois_he_is]" id="mauticform_radiogrp_radio_5_this_is_francois_he_is_B1" type="radio" value="B" />
                         {B} I would probably not have any major problem. I can explain everything he needs to know and understand most of what he says without having to ask him to repeat or speak more slowly. We can have conversations about work/school or everyday life without too much effort.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_5_this_is_francois_he_is_C2" for="mauticform_radiogrp_radio_5_this_is_francois_he_is_C2"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[5_this_is_francois_he_is]" class="mauticform-radiogrp-radio" name="mauticform[5_this_is_francois_he_is]" id="mauticform_radiogrp_radio_5_this_is_francois_he_is_C2" type="radio" value="C" />
+                        <input  name="mauticform[5_this_is_francois_he_is]" class="mauticform-radiogrp-radio q5" name="mauticform[5_this_is_francois_he_is]" id="mauticform_radiogrp_radio_5_this_is_francois_he_is_C2" type="radio" value="C" />
                         {C} I can probably give him all the necessary informations and have short conversations with him about topics such as the school/company and everyday life in our country. I can understand what he says if he speaks slowly and is ready to repeat or rephrase.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_5_this_is_francois_he_is_D3" for="mauticform_radiogrp_radio_5_this_is_francois_he_is_D3"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[5_this_is_francois_he_is]" class="mauticform-radiogrp-radio" name="mauticform[5_this_is_francois_he_is]" id="mauticform_radiogrp_radio_5_this_is_francois_he_is_D3" type="radio" value="D" />
+                        <input  name="mauticform[5_this_is_francois_he_is]" class="mauticform-radiogrp-radio q5" name="mauticform[5_this_is_francois_he_is]" id="mauticform_radiogrp_radio_5_this_is_francois_he_is_D3" type="radio" value="D" />
                         {D} I can probably take him to the company/school restaurant and explain most of the basic things we have to do in our school / company, providing he is very patient and understanding. I will need to use a lot of gestures to make up for the words I don’t know.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_5_this_is_francois_he_is_E4" for="mauticform_radiogrp_radio_5_this_is_francois_he_is_E4"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[5_this_is_francois_he_is]" class="mauticform-radiogrp-radio" name="mauticform[5_this_is_francois_he_is]" id="mauticform_radiogrp_radio_5_this_is_francois_he_is_E4" type="radio" value="E" />
+                        <input  name="mauticform[5_this_is_francois_he_is]" class="mauticform-radiogrp-radio q5" name="mauticform[5_this_is_francois_he_is]" id="mauticform_radiogrp_radio_5_this_is_francois_he_is_E4" type="radio" value="E" />
                         {E} I can only exchange few words with him. I will need help of many gestures, such as pointing at objects or showing an action in order to get some communication across.
                     </label>
                 </div>
@@ -464,31 +476,31 @@ cf-input-control-elements.one-row cf-list{height:62px}
                 <label  class="mauticform-label" for="mauticform_radiogrp_radio_6_your_boss__your_teacher_ANoproblemIcandoittomorrowIjustneed30minutestoputtheslidestogetherandImgood1">6. Your boss / your teacher asks to give a talk in French about your company/ school to a public of French speakers who don’t know your company / school well. You cannot turn the offer down, and you don’t have time to study French before the speech. You can prepare the speech and use slides. What happens? Note: please take into account only your French skills and assume you are not afraid of speaking to a crowd (at least not in your native language).</label>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_6_your_boss__your_teacher_A0" for="mauticform_radiogrp_radio_6_your_boss__your_teacher_A0"  class="mauticform-radiogrp-label">
-                        <input cf-questions="6. Your boss / your teacher asks to give a talk in French about your company/ school to a public of French speakers who don’t know your company / school well. You cannot turn the offer down, and you don’t have time to study French before the speech. You can prepare the speech and use slides. What happens? Note: please take into account only your French skills and assume you are not afraid of speaking to a crowd (at least not in your native language)." name="mauticform[6_your_boss__your_teacher]" class="mauticform-radiogrp-radio" name="mauticform[6_your_boss__your_teacher]" id="mauticform_radiogrp_radio_6_your_boss__your_teacher_A0" type="radio" value="A" />
+                        <input cf-questions="6. Your boss / your teacher asks to give a talk in French about your company/ school to a public of French speakers who don’t know your company / school well. You cannot turn the offer down, and you don’t have time to study French before the speech. You can prepare the speech and use slides. What happens? Note: please take into account only your French skills and assume you are not afraid of speaking to a crowd (at least not in your native language)." name="mauticform[6_your_boss__your_teacher]" class="mauticform-radiogrp-radio q6" name="mauticform[6_your_boss__your_teacher]" id="mauticform_radiogrp_radio_6_your_boss__your_teacher_A0" type="radio" value="A" />
                         {A} No problem, I can do it tomorrow. I just need 30 minutes to put the slides together and I’m good.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_6_your_boss__your_teacher_B1" for="mauticform_radiogrp_radio_6_your_boss__your_teacher_B1"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[6_your_boss__your_teacher]" class="mauticform-radiogrp-radio" name="mauticform[6_your_boss__your_teacher]" id="mauticform_radiogrp_radio_6_your_boss__your_teacher_B1" type="radio" value="B" />
+                        <input  name="mauticform[6_your_boss__your_teacher]" class="mauticform-radiogrp-radio q6" name="mauticform[6_your_boss__your_teacher]" id="mauticform_radiogrp_radio_6_your_boss__your_teacher_B1" type="radio" value="B" />
                         {B} I can do it without any major problem. Granted, I will make some mistakes but they will not prevent my audience from understanding (almost) everything I say. Since I can also use slides, this situation will not be too uncomfortable
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_6_your_boss__your_teacher_C2" for="mauticform_radiogrp_radio_6_your_boss__your_teacher_C2"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[6_your_boss__your_teacher]" class="mauticform-radiogrp-radio" name="mauticform[6_your_boss__your_teacher]" id="mauticform_radiogrp_radio_6_your_boss__your_teacher_C2" type="radio" value="C" />
+                        <input  name="mauticform[6_your_boss__your_teacher]" class="mauticform-radiogrp-radio q6" name="mauticform[6_your_boss__your_teacher]" id="mauticform_radiogrp_radio_6_your_boss__your_teacher_C2" type="radio" value="C" />
                         {C} With help of the slides, I can explain what we do in simple sentences. I will probably make some mistakes, which might prevent my audience from understanding some of what I say. If it does happen, I can rely on the slides to make up for it.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_6_your_boss__your_teacher_D3" for="mauticform_radiogrp_radio_6_your_boss__your_teacher_D3"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[6_your_boss__your_teacher]" class="mauticform-radiogrp-radio" name="mauticform[6_your_boss__your_teacher]" id="mauticform_radiogrp_radio_6_your_boss__your_teacher_D3" type="radio" value="D" />
+                        <input  name="mauticform[6_your_boss__your_teacher]" class="mauticform-radiogrp-radio q6" name="mauticform[6_your_boss__your_teacher]" id="mauticform_radiogrp_radio_6_your_boss__your_teacher_D3" type="radio" value="D" />
                         {D} I can only say very basic sentences, and very poorly hint at what we do in this school/company, likely with poor vocabulary and many grammar mistakes. Thankfully, I have slides to help getting my point across.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_6_your_boss__your_teacher_E4" for="mauticform_radiogrp_radio_6_your_boss__your_teacher_E4"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[6_your_boss__your_teacher]" class="mauticform-radiogrp-radio" name="mauticform[6_your_boss__your_teacher]" id="mauticform_radiogrp_radio_6_your_boss__your_teacher_E4" type="radio" value="E" />
+                        <input  name="mauticform[6_your_boss__your_teacher]" class="mauticform-radiogrp-radio q6" name="mauticform[6_your_boss__your_teacher]" id="mauticform_radiogrp_radio_6_your_boss__your_teacher_E4" type="radio" value="E" />
                         {E} Assuming I don’t faint, I would probably only be able to say something like “Hello. Welcome. This is company/school. I work/study here” and show some slides.
                     </label>
                 </div>
@@ -499,31 +511,31 @@ cf-input-control-elements.one-row cf-list{height:62px}
                 <label  class="mauticform-label" for="mauticform_radiogrp_radio_7_your_family_finds_out_t_AIcouldalmostwriteabookaboutourfamilyincludingitslifestyleanditshistoryifIhadthetime1">7. Your family finds out that you have relatives in France, and they speak only French. Your parents/siblings/children ask you to write them a letter, since none of them speaks better French than you. What does your letter look like?</label>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_7_your_family_finds_out_t_A0" for="mauticform_radiogrp_radio_7_your_family_finds_out_t_A0"  class="mauticform-radiogrp-label">
-                        <input cf-questions="7. Your family finds out that you have relatives in France, and they speak only French. Your parents/siblings/children ask you to write them a letter, since none of them speaks better French than you. What does your letter look like?" name="mauticform[7_your_family_finds_out_t]" class="mauticform-radiogrp-radio" name="mauticform[7_your_family_finds_out_t]" id="mauticform_radiogrp_radio_7_your_family_finds_out_t_A0" type="radio" value="A" />
+                        <input cf-questions="7. Your family finds out that you have relatives in France, and they speak only French. Your parents/siblings/children ask you to write them a letter, since none of them speaks better French than you. What does your letter look like?" name="mauticform[7_your_family_finds_out_t]" class="mauticform-radiogrp-radio q7" name="mauticform[7_your_family_finds_out_t]" id="mauticform_radiogrp_radio_7_your_family_finds_out_t_A0" type="radio" value="A" />
                         {A} I could almost write a book about our family, including its lifestyle and its history, if I had the time.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_7_your_family_finds_out_t_B1" for="mauticform_radiogrp_radio_7_your_family_finds_out_t_B1"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[7_your_family_finds_out_t]" class="mauticform-radiogrp-radio" name="mauticform[7_your_family_finds_out_t]" id="mauticform_radiogrp_radio_7_your_family_finds_out_t_B1" type="radio" value="B" />
+                        <input  name="mauticform[7_your_family_finds_out_t]" class="mauticform-radiogrp-radio q7" name="mauticform[7_your_family_finds_out_t]" id="mauticform_radiogrp_radio_7_your_family_finds_out_t_B1" type="radio" value="B" />
                         {B} I can write a detailed letter about our life with many details, in good French. There will be some mistakes but they won’t be terrible. This will not cost me much effort.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_7_your_family_finds_out_t_C2" for="mauticform_radiogrp_radio_7_your_family_finds_out_t_C2"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[7_your_family_finds_out_t]" class="mauticform-radiogrp-radio" name="mauticform[7_your_family_finds_out_t]" id="mauticform_radiogrp_radio_7_your_family_finds_out_t_C2" type="radio" value="C" />
+                        <input  name="mauticform[7_your_family_finds_out_t]" class="mauticform-radiogrp-radio q7" name="mauticform[7_your_family_finds_out_t]" id="mauticform_radiogrp_radio_7_your_family_finds_out_t_C2" type="radio" value="C" />
                         {C} With some effort, I can write a letter introducing our family, where we live and what we do for a living and asking them similar questions. I can certainly add an anecdote or two.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_7_your_family_finds_out_t_D3" for="mauticform_radiogrp_radio_7_your_family_finds_out_t_D3"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[7_your_family_finds_out_t]" class="mauticform-radiogrp-radio" name="mauticform[7_your_family_finds_out_t]" id="mauticform_radiogrp_radio_7_your_family_finds_out_t_D3" type="radio" value="D" />
+                        <input  name="mauticform[7_your_family_finds_out_t]" class="mauticform-radiogrp-radio q7" name="mauticform[7_your_family_finds_out_t]" id="mauticform_radiogrp_radio_7_your_family_finds_out_t_D3" type="radio" value="D" />
                         {D} I can write a very short letter introducing my family in simple and short sentences and asking them questions about their family.
                     </label>
                 </div>
                 <div class="mauticform-radiogrp-row">
                     <label id="mauticform_radiogrp_label_7_your_family_finds_out_t_E4" for="mauticform_radiogrp_radio_7_your_family_finds_out_t_E4"  class="mauticform-radiogrp-label">
-                        <input  name="mauticform[7_your_family_finds_out_t]" class="mauticform-radiogrp-radio" name="mauticform[7_your_family_finds_out_t]" id="mauticform_radiogrp_radio_7_your_family_finds_out_t_E4" type="radio" value="E" />
+                        <input  name="mauticform[7_your_family_finds_out_t]" class="mauticform-radiogrp-radio q7" name="mauticform[7_your_family_finds_out_t]" id="mauticform_radiogrp_radio_7_your_family_finds_out_t_E4" type="radio" value="E" />
                         {E} I can only write them a postcard which reads “Hello. I am [name], your cousin from [country]. How are you?"
                     </label>
                 </div>
@@ -591,7 +603,14 @@ cf-input-control-elements.one-row cf-list{height:62px}
 <script type="text/javascript">
 window.ConversationalForm = new cf.ConversationalForm({
                 formEl: document.getElementById("conversational"),
-                context: document.getElementById("form-outer"),
+                submitCallback: function(){
+						console.log("custom submit callback reached");
+						calculateamelieresult();
+						// remove Conversational Form
+						$( "#mauticform_input_placementtest_submit" ).click();
+						window.ConversationalForm.remove();
+						console.log("endofsubmitformreached");
+					}
 });
 </script>
 </body>
