@@ -224,7 +224,7 @@ cf-input-control-elements.one-row cf-list{height:62px}
     .mauticform-pagebreak-wrapper .mauticform-button-wrapper {  display: inline; }
 </style>
 <div id="mauticform_wrapper_placementtest" class="mauticform_wrapper">
-    <form autocomplete="false" id="conversational" role="form" method="post" action="https://frenchlover.mautic.net/form/submit?formId=13" id="mauticform_placementtest" data-mautic-form="placementtest">
+    <form autocomplete="false" role="form" method="post" action="https://frenchlover.mautic.net/form/submit?formId=13" id="mauticform_placementtest" data-mautic-form="placementtest">
         <div class="mauticform-error" id="mauticform_placementtest_error"></div>
         <div class="mauticform-message" id="mauticform_placementtest_message"></div>
         <div class="mauticform-innerform">
@@ -614,10 +614,10 @@ cf-input-control-elements.one-row cf-list{height:62px}
         <input type="hidden" name="mauticform[formName]" id="mauticform_placementtest_name" value="placementtest"/>
 </form>
 </div>
-<!--  -->
+<!-- Submit Action -->
 <script type="text/javascript">
 window.ConversationalForm = new cf.ConversationalForm({
-                formEl: document.getElementById("conversational"),
+                formEl: document.getElementById("mauticform_placementtest"),
                 submitCallback: function(){
 						console.log("custom submit callback reached");
 						calculateamelieresult();
