@@ -66,6 +66,7 @@ if ((counte >= 5) || (counte >= 3 && countd >= 3)) {
     plresult = 'B2+';
 } else {
     console.log("result could not be determined");
+    plresult = 'result-could-not-be-determined';
 }
 
 //write result value into result form & submit
