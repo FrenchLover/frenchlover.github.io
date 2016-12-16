@@ -32,17 +32,18 @@ console.log("calculateamelievaluesset");
 */
 
 // Count times that each value occurs
-var qcombined = q1 + q2 + q3 + q4 + q5 + q6 ;
+var qcombined = q1 + q2 + q3 + q4 + q5 + q6 + q7;
+console.log(qcombined + ' is the combined answer');
 var counta = (qcombined.match(/A/g) || []).length;
-console.log(counta + 'x C1');
+console.log(counta + 'x C1 aka A');
 var countb = (qcombined.match(/B/g) || []).length;
-console.log(countb + 'x B2');
+console.log(countb + 'x B2 aka B');
 var countc = (qcombined.match(/C/g) || []).length;
-console.log(countc + 'x B1');
+console.log(countc + 'x B1 aka C');
 var countd = (qcombined.match(/D/g) || []).length;
-console.log(countd + 'x A2');
+console.log(countd + 'x A2 aka D');
 var counte = (qcombined.match(/E/g) || []).length;
-console.log(counte + 'x A1');
+console.log(counte + 'x A1  aka E');
 
 //now let's start testing for results - bottom up
 
