@@ -635,10 +635,14 @@ window.ConversationalForm = new cf.ConversationalForm({
 						$("#mauticform_input_placementtest_submit").click();
 						window.ConversationalForm.remove();
 						console.log("endofsubmitformreached");
+                        document.write("<style>body, html {  height: 100%;  min-width: 100%;  padding: 0;  margin: 0;  overflow: hidden;}.outer-container {    position : absolute;    display: table;    width: 100%;    height: 100%;    background-color: #fff;  z-index: 999999999999999999999999999;}.inner-container {    display: table-cell;    vertical-align: middle;    text-align: center;}.centered-content {    display: inline-block;    position: relative;}<\/style><div class=\"outer-container\">    <div class=\"inner-container\">       <div class=\"centered-content\">          Thank you! Your results should arrive by email soon.       <\/div>  <\/div><\/div>");
 					}
 });
 
-document.body.scrollTop = document.body.scrollHeight - document.body.clientHeight;
+$(window).on('load', function() {
+        window.scrollTo(0,document.body.scrollHeight);
+        setTimeout(function(){ window.scrollTo(0,document.body.scrollHeight); }, 300);
+    });
 </script>
 </body>
 </html>
