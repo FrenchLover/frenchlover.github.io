@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+<!-- 
+    ________     _                                                                      _                      
+   /  ____  \   | |                                                  /\                | |                     
+  /  / ___|  \  | |     __ _ _ __   __ _ _   _  __ _  __ _  ___     /  \   ___ __ _  __| | ___ _ __ ___  _   _ 
+ |  | |       | | |    / _` | '_ \ / _` | | | |/ _` |/ _` |/ _ \   / /\ \ / __/ _` |/ _` |/ _ \ '_ ` _ \| | | |
+ |  | |___    | | |___| (_| | | | | (_| | |_| | (_| | (_| |  __/  / ____ \ (_| (_| | (_| |  __/ | | | | | |_| |
+  \  \____|  /  |______\__,_|_| |_|\__, |\__,_|\__,_|\__, |\___| /_/    \_\___\__,_|\__,_|\___|_| |_| |_|\__, |
+   \________/                       __/ |             __/ |                                               __/ |
+                                   |___/             |___/                                               |___/ 
+-->
+<title>French Placement Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<style>
+/* start main.css */
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	background-color: #fffcfa;
+	color: #00163d;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+	line-height: 1.2em;
+}
+
+span, i, a, p {
+    display: inline-block;
+}
+
+h1 {
+	font-size: 30px;
+	line-height: 1.2em;
+	font-style: italic;
+}
+
+.title {
+	font-weight: bold;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h2 {
+	font-size: 25px;
+	margin: 0;
+	margin-bottom: 22px;
+	color: #A03232;
+}
+
+h3 {
+	font-weight: bold;
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+	cursor: pointer;
+	transition-delay: 0s;
+	transition-duration: 0.16s;
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+}
+
+a:hover {
+}
+
+a img {
+    border: 0;
+}
+
+.link {
+	border-bottom: 1px solid;
+	transition-delay: 0s;
+	transition-duration: 0.16s;
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+}
+
+.link:hover {
+	text-decoration: none;
+	color: #4f4f4f;
+	border-bottom: none;
+	border-bottom: 1px dotted;
+}
+
+.google {
+	display: none;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+h1 {
+	font-size: 26px;
+}
+
+h2 {
+	font-size: 22px;
+}
+
+
+}
+
+
+/* Common button styles */
+.button {
+	float: left;
+	min-width: 150px;
+	max-width: 290px;
+	display: block;
+	margin: 1em;
+	padding: 1em 2em;
+	border: none;
+	background: none;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+.button:focus {
+	outline: none;
+}
+.button > span {
+	vertical-align: middle;
+}
+
+/* Sizes */
+.button--size-s {
+	font-size: 14px;
+}
+.button--size-m {
+	font-size: 16px;
+}
+.button--size-l {
+	font-size: 18px;
+}
+
+/* Typography and Roundedness */
+.button--text-upper {
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.button--text-thin {
+	font-weight: 300;
+}
+.button--text-medium {
+	font-weight: 500;
+}
+.button--text-thick {
+	font-weight: 600;
+}
+.button--round-s {
+	border-radius: 5px;
+}
+.button--round-m {
+	border-radius: 15px;
+}
+.button--round-l {
+	border-radius: 40px;
+}
+
+/* Borders */
+.button--border-thin {
+	border: 1px solid;
+}
+.button--border-medium {
+	border: 2px solid;
+}
+.button--border-thick {
+	border: 3px solid;
+}
+
+/* Individual button styles */
+
+/* Ujarak */
+.button--ujarak {
+	-webkit-transition: border-color 0.4s, color 0.4s;
+	transition: border-color 0.4s, color 0.4s;
+}
+.button--ujarak::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	z-index: -1;
+	opacity: 0;
+	-webkit-transform: scale3d(0.7, 1, 1);
+	transform: scale3d(0.7, 1, 1);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+	transition: transform 0.4s, opacity 0.4s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--ujarak.button--round-s::before {
+	border-radius: 2px;
+}
+.button--ujarak.button--inverted::before {
+	background: #fff;
+}
+.button--ujarak,
+.button--ujarak::before {
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--ujarak:hover {
+	color: #A03232;
+	border-color: #A03232;
+}
+.button--ujarak.button--inverted:hover {
+	color: #A03232;
+	border-color: #A03232;
+}
+.button--ujarak:hover::before {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+
+/* CUSTOM */
+
+.startbutton {
+	color: #fff;
+	background-color: #A03232;
+	float: none;
+	margin: 0 auto;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	margin: 0;
+	margin-top: 25px;
+	border: 3px #A03232 solid;
+	display: inline-block;
+}
+
+/* end main.css */
+
+body, html {
+  height: 100%;
+  min-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.outer-container {
+    position : relative;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.inner-container {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.centered-content {
+    display: inline-block;
+    position: relative;
+    max-width: 700px;
+    margin: 30px;
+}
+
+.description {
+    text-align: center;
+}
+
+ol {
+    text-align: left;
+    padding-left: 18px;
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    font-weight: bold;
+    line-height: 1.3em;
+    display: inline-block;
+}
+
+li span {
+    font-weight: normal;
+    display: -webkit-inline-flex
+}
+
+.topquote {
+    margin: 0;
+    margin-bottom: 22px;
+    display: block;
+}
+
+.logo {
+    margin: 0 auto;
+    margin-top: 30px;
+    display: block;
+    max-width: 120px;
+    float: none;
+}
+
+
+</style>
+<script type="text/javascript">
+
+    /** This section is only needed once per page if manually copying **/
+    if (typeof MauticSDKLoaded == 'undefined') {
+        var MauticSDKLoaded = true;
+        var head            = document.getElementsByTagName('head')[0];
+        var script          = document.createElement('script');
+        script.type         = 'text/javascript';
+        script.src          = 'https://frenchlover.mautic.net/mautic/media/js/mautic-form.js';
+        script.onload       = function() {
+            MauticSDK.onLoad();
+        };
+        head.appendChild(script);
+        var MauticDomain = 'https://frenchlover.mautic.net';
+        var MauticLang   = {
+            'submittingMessage': "Please wait..."
+        }
+    }
+</script>
+
+</head>
+<body>
+<div class="outer-container">  
+  <div class="inner-container">
+       <div class="centered-content description">
+                
+			<style type="text/css" scoped>
+				.mauticform_wrapper { max-width: 600px; margin: 10px auto; }
+				.mauticform-innerform {}
+				.mauticform-post-success {}
+				.mauticform-name { font-weight: bold; font-size: 1.5em; margin-bottom: 3px; }
+				.mauticform-description { margin-top: 2px; margin-bottom: 10px; }
+				.mauticform-error { margin-bottom: 10px; color: red; }
+				.mauticform-message { margin-bottom: 10px;color: green; }
+				.mauticform-row { display: block; margin-bottom: 20px; }
+				.mauticform-label { font-size: 1.1em; display: block; font-weight: bold; margin-bottom: 5px; }
+				.mauticform-row.mauticform-required .mauticform-label:after { color: #e32; content: " *"; display: inline; }
+				.mauticform-helpmessage { display: block; font-size: 0.9em; margin-bottom: 3px; }
+				.mauticform-errormsg { display: block; color: red; margin-top: 2px; }
+				.mauticform-selectbox, .mauticform-input, .mauticform-textarea { width: 100%; padding: 0.5em 0.5em; border: 1px solid #CCC; background: #fff; box-shadow: 0px 0px 0px #fff inset; border-radius: 4px; box-sizing: border-box; }
+				.mauticform-checkboxgrp-row {}
+				.mauticform-checkboxgrp-label { font-weight: normal; }
+				.mauticform-checkboxgrp-checkbox {}
+				.mauticform-radiogrp-row {}
+				.mauticform-radiogrp-label { font-weight: normal; }
+				.mauticform-radiogrp-radio {}
+				.mauticform-button-wrapper .mauticform-button.btn-default, .mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default { color: #5d6c7c;background-color: #ffffff;border-color: #dddddd;}
+				.mauticform-button-wrapper .mauticform-button, .mauticform-pagebreak-wrapper .mauticform-pagebreak { display: inline-block;margin-bottom: 0;font-weight: 600;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 6px 12px;font-size: 13px;line-height: 1.3856;border-radius: 3px;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+				.mauticform-button-wrapper .mauticform-button.btn-default[disabled], .mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default[disabled] { background-color: #ffffff; border-color: #dddddd; opacity: 0.75; cursor: not-allowed; }
+				.mauticform-pagebreak-wrapper .mauticform-button-wrapper {  display: inline; }
+			</style>
+			<div id="mauticform_wrapper_unsubscribefromyoutubeupdates" class="mauticform_wrapper">
+				<form autocomplete="false" role="form" method="post" action="https://frenchlover.mautic.net/form/submit?formId=27" id="mauticform_unsubscribefromyoutubeupdates" data-mautic-form="unsubscribefromyoutubeupdates">
+					<div class="mauticform-error" id="mauticform_unsubscribefromyoutubeupdates_error"></div>
+					<div class="mauticform-message" id="mauticform_unsubscribefromyoutubeupdates_message"></div>
+					<div class="mauticform-innerform">
+
+						
+					<div class="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
+
+						<div id="mauticform_unsubscribefromyoutubeupdates_please_enter_your_email_a"  data-validate="please_enter_your_email_a" data-validation-type="email" class="mauticform-row mauticform-email mauticform-field-1 mauticform-required">
+							<label id="mauticform_label_unsubscribefromyoutubeupdates_please_enter_your_email_a" for="mauticform_input_unsubscribefromyoutubeupdates_please_enter_your_email_a" class="mauticform-label">Please enter your email address to unsubscribe</label>
+							<input id="mauticform_input_unsubscribefromyoutubeupdates_please_enter_your_email_a" name="mauticform[please_enter_your_email_a]" value="" class="mauticform-input" type="email" />
+							<span class="mauticform-errormsg" style="display: none;">This is required.</span>
+						</div>
+
+						<div id="mauticform_unsubscribefromyoutubeupdates_submit"  class="mauticform-row mauticform-button-wrapper mauticform-field-2">
+							<button type="submit" name="mauticform[submit]" id="mauticform_input_unsubscribefromyoutubeupdates_submit" name="mauticform[submit]" value="" class="mauticform-button btn btn-default" value="1">Submit</button>
+						</div>
+						</div>
+					</div>
+
+					<input type="hidden" name="mauticform[formId]" id="mauticform_unsubscribefromyoutubeupdates_id" value="27"/>
+					<input type="hidden" name="mauticform[return]" id="mauticform_unsubscribefromyoutubeupdates_return" value=""/>
+					<input type="hidden" name="mauticform[formName]" id="mauticform_unsubscribefromyoutubeupdates_name" value="unsubscribefromyoutubeupdates"/>
+			</form>
+			</div>
+
+       </div>
+  </div>
+</div>
+
+<script>
+var MauticFormCallback = {
+    unsubscribefromyoutubeupdates: {
+        onValidateEnd: function () {
+             alert("before form submit");
+        },
+        onResponse: function (response) { 
+             alert("after form submit");
+        }
+    }
+};
+</script>
+
+<script>
+
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}	
+
+var email = getQueryVariable("email");
+document.getElementById('mauticform_input_unsubscribefromyoutubeupdates_please_enter_your_email_a').value = email;
+</script>
+
+</body>
+</html>

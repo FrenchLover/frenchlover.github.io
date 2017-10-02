@@ -1,0 +1,3 @@
+$("#mauticform_input_placementtestresults_placementtestresult").val('test');
+$("#mauticform_input_placementtestresults_identifyuserplresult").val($('#mauticform_input_placementtest_please_enter_your_email_a').val());
+$( "#mauticform_input_placementtestresults_submit" ).click();
